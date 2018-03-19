@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <Version>0.1</Version>
+    <Authors>Steven Pears</Authors>
+    <Company />
+    <Description>Helper package to more quickly add the Alexa Sound Library to Alexa.NET SSML Responses</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</RepositoryUrl>
+    <PackageTags>alexa, alexa.net, sound, ssml</PackageTags>
+    <PackageReleaseNotes>initial structure</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alexa.NET" Version="1.4.2" />
+  </ItemGroup>
+
+</Project>
