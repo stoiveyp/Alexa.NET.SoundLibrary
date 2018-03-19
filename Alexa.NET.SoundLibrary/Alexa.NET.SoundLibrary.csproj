@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.1</Version>
+    <Version>0.1-pre</Version>
     <Authors>Steven Pears</Authors>
     <Company />
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
     <Description>Helper package to more quickly add the Alexa Sound Library to Alexa.NET SSML Responses</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</RepositoryUrl>
     <PackageTags>alexa, alexa.net, sound, ssml</PackageTags>
-    <PackageReleaseNotes>initial structure</PackageReleaseNotes>
+    <PackageReleaseNotes>Add support for animal, battle, cartoon, magic, impact and foley</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
