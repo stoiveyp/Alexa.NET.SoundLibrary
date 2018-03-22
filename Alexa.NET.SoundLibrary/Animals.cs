@@ -1,6 +1,6 @@
 ﻿using Alexa.NET.Response.Ssml;
 
-namespace Alexa.NET.Ssml.SoundLibrary
+namespace Alexa.NET.Response.Ssml.SoundLibrary
 {
     public static class Animals
     {
@@ -123,7 +123,8 @@ namespace Alexa.NET.Ssml.SoundLibrary
         public static Audio LionRoar03 => new Audio(LionRoar03Url);
         public static Audio MonkeyCalls => new Audio(MonkeyCallsUrl);
         public static Audio MonkeyChimp => new Audio(MonkeyChimpUrl);
-        public static Audio MonkeyChatter = new Audio(MonkeyChatterUrl);
+
+        public static Audio MonkeyChatter => new Audio(MonkeyChatterUrl);
         public static Audio RatSqueaks => new Audio(RatSqueaksUrl);
         public static Audio Rat2Squeaks => new Audio(Rat2SqueaksUrl);
         public static Audio RavenCaw => new Audio(RavenCawUrl);

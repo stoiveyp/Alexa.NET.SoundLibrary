@@ -1,6 +1,6 @@
 ﻿using Alexa.NET.Response.Ssml;
 
-namespace Alexa.NET.Ssml.SoundLibrary
+namespace Alexa.NET.Response.Ssml.SoundLibrary
 {
     public static class Human
     {

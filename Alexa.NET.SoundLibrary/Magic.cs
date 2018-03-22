@@ -1,6 +1,6 @@
 using Alexa.NET.Response.Ssml;
 
-namespace Alexa.NET.Ssml.SoundLibrary
+namespace Alexa.NET.Response.Ssml.SoundLibrary
 {
     public static class Magic
     {
@@ -12,8 +12,8 @@ namespace Alexa.NET.Ssml.SoundLibrary
         private const string GhostSpooky04Url = "https://s3.amazonaws.com/ask-soundlibrary/magic/amzn_sfx_ghost_spooky_04.mp3";
         private const string MagicBlastUrl = "https://s3.amazonaws.com/ask-soundlibrary/magic/amzn_sfx_magic_blast_1x_01.mp3";
 
-        public static Audio FairyMelodicChimes = new Audio(FairyMelodicChimesUrl);
-        public static Audio FairySparkleChimes = new Audio(FairySparkleChimesUrl);
+        public static Audio FairyMelodicChimes => new Audio(FairyMelodicChimesUrl);
+        public static Audio FairySparkleChimes => new Audio(FairySparkleChimesUrl);
         public static Audio GhostSpooky01 => new Audio(GhostSpooky01Url);
         public static Audio GhostSpooky02 => new Audio(GhostSpooky02Url);
         public static Audio GhostSpooky03 => new Audio(GhostSpooky03Url);
