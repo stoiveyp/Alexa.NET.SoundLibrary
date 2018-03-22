@@ -1,7 +1,93 @@
-﻿namespace Alexa.NET.Ssml.SoundLibrary
+﻿using Alexa.NET.Response.Ssml;
+
+namespace Alexa.NET.Ssml.SoundLibrary
 {
     public static class Human
     {
-        public static string ComingSoon = string.Empty;
+        private const string BabyBigCryUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_baby_big_cry_01.mp3";
+        private const string BabyCry01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_baby_cry_01.mp3";
+        private const string BabyCry02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_baby_cry_02.mp3";
+        private const string BabyFussUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_baby_fuss_01.mp3";
+        private const string ClearThroatAhemUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_clear_throat_ahem_01.mp3";
+        private const string Cough01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_cough_01.mp3";
+        private const string Cough02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_cough_02.mp3";
+        private const string Cough03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_cough_03.mp3";
+        private const string Cough04Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_cough_04.mp3";
+        private const string CrowdApplause01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_applause_01.mp3";
+        private const string CrowdApplause02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_applause_02.mp3";
+        private const string CrowdApplause03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_applause_03.mp3";
+        private const string CrowdApplause04Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_applause_04.mp3";
+        private const string CrowdApplause05Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_applause_05.mp3";
+        private const string CrowdBoo01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_boo_01.mp3";
+        private const string CrowdBoo02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_boo_02.mp3";
+        private const string CrowdBoo03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_boo_03.mp3";
+        private const string CrowdCheerMediumUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_cheer_med_01.mp3";
+        private const string CrowdExcitedCheerUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_crowd_excited_cheer_01.mp3";
+        private const string DrinkingSlurpUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_drinking_slurp_01.mp3";
+        private const string HumanWalking01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_01.mp3";
+        private const string HumanWalking02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_02.mp3";
+        private const string HumanWalking03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_03.mp3";
+        private const string LargeCrowdCheer01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_large_crowd_cheer_01.mp3";
+        private const string LargeCrowdCheer02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_large_crowd_cheer_02.mp3";
+        private const string LargeCrowdCheer03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_large_crowd_cheer_03.mp3";
+        private const string LaughterUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_laughter_01.mp3";
+        private const string LaughterGiggle01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_laughter_giggle_01.mp3";
+        private const string LaughterGiggle02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_laughter_giggle_02.mp3";
+        private const string PeopleWalking01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_people_walking_01.mp3";
+        private const string PeopleWalking02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_people_walking_02.mp3";
+        private const string PeopleRunning01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_person_running_01.mp3";
+        private const string PeopleRunning02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_person_running_02.mp3";
+        private const string PeopleRunning03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_person_running_03.mp3";
+        private const string Sneeze01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_sneeze_01.mp3";
+        private const string Sneeze02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_sneeze_02.mp3";
+        private const string WalkingInMud01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_in_mud_01.mp3";
+        private const string WalkingInMud02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_in_mud_02.mp3";
+        private const string WalkingInSnowUrl = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_in_snow_01.mp3";
+        private const string WalkingOnGrass01Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_on_grass_01.mp3";
+        private const string WalkingOnGrass02Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_on_grass_02.mp3";
+        private const string WalkingOnGrass03Url = "https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_walking_on_grass_03.mp3";
+
+        public static Audio BabyBigCry => new Audio(BabyBigCryUrl);
+        public static Audio BabyCry01 => new Audio(BabyCry01Url);
+        public static Audio BabyCry02 => new Audio(BabyCry02Url);
+        public static Audio BabyFuss => new Audio(BabyFussUrl);
+        public static Audio ClearThroatAhem => new Audio(ClearThroatAhemUrl);
+        public static Audio Cough01 => new Audio(Cough01Url);
+        public static Audio Cough02 => new Audio(Cough02Url);
+        public static Audio Cough03 => new Audio(Cough03Url);
+        public static Audio Cough04 => new Audio(Cough04Url);
+        public static Audio CrowdApplause01 => new Audio(CrowdApplause01Url);
+        public static Audio CrowdApplause02 => new Audio(CrowdApplause02Url);
+        public static Audio CrowdApplause03 => new Audio(CrowdApplause03Url);
+        public static Audio CrowdApplause04 => new Audio(CrowdApplause04Url);
+        public static Audio CrowdApplause05 => new Audio(CrowdApplause05Url);
+        public static Audio CrowdBoo01 => new Audio(CrowdBoo01Url);
+        public static Audio CrowdBoo02 => new Audio(CrowdBoo02Url);
+        public static Audio CrowdBoo03 => new Audio(CrowdBoo03Url);
+        public static Audio CrowdCheerMedium => new Audio(CrowdCheerMediumUrl);
+        public static Audio CrowdExcitedCheer => new Audio(CrowdExcitedCheerUrl);
+        public static Audio DrinkingSlurp => new Audio(DrinkingSlurpUrl);
+        public static Audio HumanWalking01 => new Audio(HumanWalking01Url);
+        public static Audio HumanWalking02 => new Audio(HumanWalking02Url);
+        public static Audio HumanWalking03 => new Audio(HumanWalking03Url);
+        public static Audio LargeCrowdCheer01 => new Audio(LargeCrowdCheer01Url);
+        public static Audio LargeCrowdCheer02 => new Audio(LargeCrowdCheer02Url);
+        public static Audio LargeCrowdCheer03 => new Audio(LargeCrowdCheer03Url);
+        public static Audio Laughter => new Audio(LaughterUrl);
+        public static Audio LaughterGiggle01 => new Audio(LaughterGiggle01Url);
+        public static Audio LaughterGiggle02 => new Audio(LaughterGiggle02Url);
+        public static Audio PeopleWalking01 => new Audio(PeopleWalking01Url);
+        public static Audio PeopleWalking02 => new Audio(PeopleWalking02Url);
+        public static Audio PeopleRunning01 => new Audio(PeopleRunning01Url);
+        public static Audio PeopleRunning02 => new Audio(PeopleRunning02Url);
+        public static Audio PeopleRunning03 => new Audio(PeopleRunning03Url);
+        public static Audio Sneeze01 => new Audio(Sneeze01Url);
+        public static Audio Sneeze02 => new Audio(Sneeze02Url);
+        public static Audio WalkingInMud01 => new Audio(WalkingInMud01Url);
+        public static Audio WalkingInMud02 => new Audio(WalkingInMud02Url);
+        public static Audio WalkingInSnow => new Audio(WalkingInSnowUrl);
+        public static Audio WalkingOnGrass01 => new Audio(WalkingOnGrass01Url);
+        public static Audio WalkingOnGrass02 => new Audio(WalkingOnGrass02Url);
+        public static Audio WalkingOnGrass03 => new Audio(WalkingOnGrass03Url);
     }
 }
