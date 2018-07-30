@@ -5,6 +5,6 @@ This package gives you a quick way of referencing the sound effects offered by A
 ```csharp
 using Alexa.NET.Response.Ssml.SoundLibrary;
 ...
-var speech = new Speech {Elements = new List<ISsml> { Human.Cough01 }};
+var speech = new Speech newSsml = new Speech(new Paragraph(Human.Cough01));
 return ResponseBuilder.Tell(speech);
 ```
