@@ -11,7 +11,7 @@
     <PackageProjectUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</RepositoryUrl>
     <PackageTags>alexa, alexa.net, sound, ssml</PackageTags>
-    <PackageReleaseNotes>Add support for all categories</PackageReleaseNotes>
+    <PackageReleaseNotes>Add GameShow category</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
