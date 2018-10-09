@@ -11,7 +11,7 @@
     <PackageProjectUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stoiveyp/Alexa.NET.SoundLibrary</RepositoryUrl>
     <PackageTags>alexa, alexa.net, sound, ssml</PackageTags>
-    <PackageReleaseNotes>Add GameShow category</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated all the sounds to use the soundback:// protocol which helps minimize latency.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
